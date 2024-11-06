@@ -1,0 +1,7 @@
+Version 5.4.1.0
+
+**Features:**
+
+* Updated GenesisPHP v1.18.4
+    * added new transaction type **UPI**
+* Updated the transaction types support list for **emerchantpay Checkout Transaction Types**

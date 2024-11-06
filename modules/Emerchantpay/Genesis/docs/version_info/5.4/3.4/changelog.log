@@ -1,0 +1,6 @@
+Version 5.4.3.4
+
+Features:
+
+    - Updated support of PaySafeCard transaction type via Web Payment Form.
+    - Updated Genesis PHP library to version 1.24.0

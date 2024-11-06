@@ -1,0 +1,7 @@
+.idea
+.DS_Store
+phpcs_report.xml
+phpmd_report.xml
+modules/Emerchantpay/Genesis/vendor/*
+!modules/Emerchantpay/Genesis/vendor/genesisgateway
+!modules/Emerchantpay/Genesis/vendor/composer

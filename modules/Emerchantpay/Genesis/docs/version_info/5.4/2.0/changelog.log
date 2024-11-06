@@ -1,0 +1,12 @@
+Version 5.4.2.0
+
+Features:
+
+    - Updated Genesis PHP library to version 1.21.4
+    - Removed emerchantpay Direct payment method
+
+Fixes:
+
+    - Fixed 3DSv2 parameters calculations
+    - Fixed Transaction Request data mapping
+    - Fixed 3DSv2 parameters handling upon missing previous orders

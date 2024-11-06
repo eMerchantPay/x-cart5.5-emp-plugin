@@ -1,0 +1,11 @@
+Version 5.4.1.4
+
+Features:
+
+    - Updated Genesis PHP SDK library to version 1.20.0
+    - Updated Card.js to the latests
+    - Added new transaction type Pay Pal via Web Payment Form with support of its methods:
+        - Authorize
+        - Sale
+        - Express
+    - Updated Google Pay transaction type via Web Payment Form with the latest requirements from the payment gateway

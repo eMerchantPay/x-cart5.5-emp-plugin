@@ -1,0 +1,15 @@
+Version 5.3.4.3
+
+Features:
+
+    - Updated Genesis PHP SDK library to version 1.19.1
+    - Updated Card.js javascript plugin
+    - Removed following transaction types support:
+        - Zimpler
+        - Santander Cash
+        - QIWI
+    - Added a new transaction type support - Post Finance
+
+Fixes:
+
+    - Fixed the Genesis Transaction Id generation

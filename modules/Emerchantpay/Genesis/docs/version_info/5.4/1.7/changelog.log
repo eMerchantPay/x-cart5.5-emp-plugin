@@ -1,0 +1,7 @@
+Version 5.4.1.7
+
+Features:
+
+    - Updated Genesis PHP SDK library to version 1.21.2
+    - Updated Card.js to the latest
+    - Added new transaction type Pix via Web Payment Form

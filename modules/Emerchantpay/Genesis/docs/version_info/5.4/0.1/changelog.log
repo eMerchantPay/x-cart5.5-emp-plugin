@@ -1,0 +1,10 @@
+Version 5.4.0.1
+
+Features:
+
+    - Updated GenesisPHP to 1.17.1
+    - Added WPF Tokenization support
+
+Fixes:
+
+    - Resolved an issue with improper handling of canceled or failed payment

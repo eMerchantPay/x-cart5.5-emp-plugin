@@ -1,0 +1,5 @@
+Version 5.4.1.6
+
+Features:
+
+    - Added Bank Code option in the emerchantpay Checkout payment config used by Online Banking Transaction Type

@@ -1,0 +1,9 @@
+Version 5.4.3.7
+
+Features:
+
+    - Updated Genesis PHP SDK to version 2.0.2
+    - Updated transaction types list in the emerchantpay Checkout payment method
+    - Added the following bank codes support through Online Banking transaction type:
+        - LatiPay
+        - SPEI

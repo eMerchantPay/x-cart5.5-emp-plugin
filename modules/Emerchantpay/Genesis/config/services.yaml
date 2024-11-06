@@ -1,0 +1,15 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+monolog:
+  channels: [ emerchantpay ]
+  handlers:
+    custom:
+      level: debug
+      type: rotating_file
+      path: '%kernel.logs_dir%/emerchantpay.log'
+      filename_format: 'emerchantpay.{date}'
+      channels: [ emerchantpay ]
+    xlite:
+      channels: [ '!emerchantpay' ]

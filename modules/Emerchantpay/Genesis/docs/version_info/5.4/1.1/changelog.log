@@ -1,0 +1,6 @@
+Version 5.4.1.1
+
+**Features:**
+
+* Updated the way of generating transaction's ids used in the transactions
+* Updated the Credit Card javascript plugin used by the Direct Method

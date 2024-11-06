@@ -1,0 +1,6 @@
+Version 5.4.3.1
+
+Features:
+
+    - Updated Genesis PHP library to version 1.21.7
+    - Added Web Payment Form strict list order of the selected Transaction Types that are being sent to the Gateway

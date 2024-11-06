@@ -1,0 +1,6 @@
+Version 5.4.3.3
+
+Features:
+
+    - Added Blik One Click transaction request support for Online Banking via Web Payment Form
+    - Updated Genesis PHP library to version 1.21.12

@@ -1,0 +1,10 @@
+Version 5.4.0.2
+
+Features:
+
+    - Updated GenesisPHP to 1.18.3
+    - Added changelogs
+
+Fixes:
+
+    - Fixed a Direct Payment Form redirect issue with a Fast Lane Checkout option chosen

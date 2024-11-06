@@ -1,0 +1,8 @@
+Version 5.4.1.8
+
+Features:
+
+    - Added support for 3DSv2 params via the emerchantpay Checkout method
+    - Added support for SCA Exemption settings via the emerchantpay Checkout method
+    - Added 3DSv2 parameters handling via Web Payment Form
+    - Added SCA Exemption parameters handling via Web Payment Form

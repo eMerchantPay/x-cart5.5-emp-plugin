@@ -1,0 +1,57 @@
+/*
+ * Copyright (C) 2018-2025 emerchantpay Ltd.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * @author      emerchantpay
+ * @copyright   2018-2025 emerchantpay Ltd.
+ * @license     http://opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2 (GPL-2.0)
+ */
+
+.payment-settings.emerchantpay {
+  float: left;
+  width: 100%;
+}
+
+.payment-settings.emerchantpay .alert div.table-label {
+  width: 100%;
+  color: inherit;
+}
+
+.payment-settings-controls-container {
+  float: left;
+  width: 60%;
+}
+
+.payment-settings-help-container {
+  float: left;
+  width: 40%;
+}
+
+.payment-settings-help-inner-container {
+  padding: 0 20pt;
+  overflow: auto;
+}
+
+.payment-settings-help-container .logo-emerchantpay {
+  background: transparent url(../images/emerchantpay-logo.png) no-repeat center center;
+  float: left;
+  width: 100%;
+  height: 50pt;
+  margin-bottom: 10pt;
+  display: inline-block;
+}
+
+.payment-settings-help-container .logo-emerchantpayCheckout {
+  background: transparent url(../images/emerchantpay_checkout.png) no-repeat center center;
+  height: 30pt;
+  padding-top: 50pt;
+}

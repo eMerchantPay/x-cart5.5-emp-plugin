@@ -1,0 +1,6 @@
+Version 5.4.3.0
+
+Features:
+
+    - Updated Genesis PHP library to version 1.21.6
+    - Added Belgium Bancontact Bank Code option in the emerchantpay Checkout payment config used by Online Banking Transaction Type
