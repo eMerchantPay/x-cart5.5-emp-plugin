@@ -1,7 +1,7 @@
 {
     "name": "emerchantpay/xcart-emerchantpay-plugin",
     "description": "emerchantpay Gateway Module for X-Cart",
-    "version": "5.5.1.0",
+    "version": "5.5.1.1",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -16,16 +16,16 @@
     },
     "scripts": {
         "php-cs": [
-            "modules/Emerchantpay/Genesis/vendor/bin/phpcs . --report=summary --standard=.phpcs.xml"
+            "modules/EMerchantPay/Genesis/vendor/bin/phpcs . --report=summary --standard=.phpcs.xml"
         ],
         "php-md": [
-            "modules/Emerchantpay/Genesis/vendor/bin/phpmd . ansi ./.phpmd.xml --not-strict"
+            "modules/EMerchantPay/Genesis/vendor/bin/phpmd . ansi ./.phpmd.xml --not-strict"
         ],
         "php-cs-jenkins": [
-            "modules/Emerchantpay/Genesis/vendor/bin/phpcs . --standard=.phpcs.xml --report=checkstyle --report-file=phpcs_report.xml"
+            "modules/EMerchantPay/Genesis/vendor/bin/phpcs . --standard=.phpcs.xml --report=checkstyle --report-file=phpcs_report.xml"
         ],
         "php-md-jenkins": [
-            "modules/Emerchantpay/Genesis/vendor/bin/phpmd . xml ./.phpmd.xml --reportfile phpmd_report.xml"
+            "modules/EMerchantPay/Genesis/vendor/bin/phpmd . xml ./.phpmd.xml --reportfile phpmd_report.xml"
         ],
         "styles": [
             "@php-cs",
@@ -33,7 +33,7 @@
         ]
     },
     "config": {
-        "vendor-dir": "modules/Emerchantpay/Genesis/vendor/"
+        "vendor-dir": "modules/EMerchantPay/Genesis/vendor/"
     },
     "require": {
         "genesisgateway/genesis_php": "2.0.3"

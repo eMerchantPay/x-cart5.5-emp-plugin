@@ -33,7 +33,7 @@ Installation (Manual)
 * In the ```<root>``` folder of your X-Cart installation run:
   ```$ ./bin/service xcst:rebuild```
 * To enable the plugin in the ```<root>``` folder of your X-Cart installation run:
-  ```$ ./bin/service xcst:rebuild --enable=Emerchantpay-Genesis```
+  ```$ ./bin/service xcst:rebuild --enable=EMerchantPay-Genesis```
 
 Configuration
 ------------
