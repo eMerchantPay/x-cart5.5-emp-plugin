@@ -61,36 +61,6 @@ abstract class Main extends \XLite\Module\AModule
     }
 
     /**
-     * Get module major version
-     *
-     * @return string
-     */
-    public static function getMajorVersion()
-    {
-        return '5.5';
-    }
-
-    /**
-     * Module version
-     *
-     * @return string
-     */
-    public static function getMinorVersion()
-    {
-        return '1';
-    }
-
-    /**
-     * Module built version
-     *
-     * @return string
-     */
-    public static function getBuildVersion()
-    {
-        return '1';
-    }
-
-    /**
      * Module description
      *
      * @return string
@@ -174,27 +144,5 @@ abstract class Main extends \XLite\Module\AModule
     public static function getCurrentCoreVersion()
     {
         return \XLite::getInstance()->getVersion();
-    }
-
-    /**
-     * Detects if the X-Cart Core Version is 5.2
-     *
-     * @return bool
-     */
-    public static function isCoreVersion52()
-    {
-        return
-            version_compare(self::getCurrentCoreVersion(), '5.2', '>=') &&
-            version_compare(self::getCurrentCoreVersion(), '5.3', '<=');
-    }
-
-    /**
-     * Detects if the X-Cart Core Version is 5.3
-     *
-     * @return bool
-     */
-    public static function isCoreAboveVersion53()
-    {
-        return version_compare(self::getCurrentCoreVersion(), '5.3', '>=');
     }
 }

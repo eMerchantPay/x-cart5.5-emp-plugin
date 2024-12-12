@@ -114,7 +114,9 @@ abstract class AEmerchantpay extends \XLite\Model\Payment\Base\Online
      */
     public function getReturnType()
     {
-        return self::RETURN_TYPE_HTTP_REDIRECT;
+        return ($this->getSetting('iframe_processing'))
+            ? self::RETURN_TYPE_CUSTOM
+            : self::RETURN_TYPE_HTTP_REDIRECT;
     }
 
     /**
@@ -1265,26 +1267,6 @@ HTML;
             $logger = $container ? $container->get('monolog.logger.emerchantpay') : new NullLogger();
             $logger->info($data);
         }
-    }
-
-    /**
-     * Detects if the X-Cart Core Version is 5.2
-     *
-     * @return bool
-     */
-    protected function isCoreVersion52()
-    {
-        return \EMerchantPay\Genesis\Main::isCoreVersion52();
-    }
-
-    /**
-     * Detects if the X-Cart Core Version is 5.3
-     *
-     * @return bool
-     */
-    protected function isCoreAboveVersion53()
-    {
-        return \EMerchantPay\Genesis\Main::isCoreAboveVersion53();
     }
 
     /**

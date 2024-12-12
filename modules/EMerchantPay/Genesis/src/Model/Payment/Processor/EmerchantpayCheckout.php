@@ -49,9 +49,79 @@ class EmerchantpayCheckout extends \EMerchantPay\Genesis\Model\Payment\Processor
     public const PAYMENT_METHOD_NAME = 'emerchantpay_checkout';
 
     /**
+     * Get payment widget data
+     *
+     * @return array
+     */
+    public function getPaymentWidgetData()
+    {
+        return [];
+    }
+
+    /**
+     * Before Capture transaction
+     *
+     * @param \XLite\Model\Payment\BackendTransaction $transaction
+     *
+     * @return void
+     */
+    public function doBeforeCapture(\XLite\Model\Payment\BackendTransaction $transaction)
+    {
+        // Set the token
+        $this->setTerminalToken($transaction);
+    }
+
+    /**
+     * Before Refund transaction
+     *
+     * @param \XLite\Model\Payment\BackendTransaction $transaction
+     *
+     * @return void
+     */
+    public function doBeforeRefund(\XLite\Model\Payment\BackendTransaction $transaction)
+    {
+        // Set the token
+        $this->setTerminalToken($transaction);
+    }
+
+    /**
+     * Before Void transaction
+     *
+     * @param \XLite\Model\Payment\BackendTransaction $transaction
+     *
+     * @return void
+     */
+    public function doBeforeVoid(\XLite\Model\Payment\BackendTransaction $transaction)
+    {
+        // Set the token
+        $this->setTerminalToken($transaction);
+    }
+
+    /**
+     * Do custom redirect after customer's return
+     *
+     * @return void
+     *
+     * @SuppressWarnings(PHPMD.ExitExpression)
+     */
+    public function doCustomReturnRedirect()
+    {
+        $url = \XLite\Core\Session::getInstance()->iframeReturnUrl ?? '';
+        static::log('doCustomReturnRedirect(): ' . $url);
+
+        $twig = \XCart\Container::getServiceLocator()->getTwig();
+        $twig->display(parent::CHECKOUT_TEMPLATE_DIR . 'emerchantpayIframe.twig', ['emp_url' => $url]);
+
+        exit(0);
+    }
+
+    /**
      * Create payment method transaction
      *
      * @return string $status Transaction Status
+     *
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
      */
     protected function doInitialPayment()
     {
@@ -129,6 +199,13 @@ class EmerchantpayCheckout extends \EMerchantPay\Genesis\Model\Payment\Processor
                         : '';
 
                 throw new Exception($errorMessage);
+            }
+
+            if ($this->getSetting('iframe_processing')) {
+                \XLite\Core\Event::empProcessWPFIframe(['url' => $gatewayResponseObject->redirect_url]);
+                $status = static::SILENT;
+
+                return $status;
             }
 
             $status = self::PROLONGATION;
@@ -285,45 +362,6 @@ class EmerchantpayCheckout extends \EMerchantPay\Genesis\Model\Payment\Processor
         $state = new States($response->status);
 
         return $state->isError();
-    }
-
-    /**
-     * Before Capture transaction
-     *
-     * @param \XLite\Model\Payment\BackendTransaction $transaction
-     *
-     * @return void
-     */
-    public function doBeforeCapture(\XLite\Model\Payment\BackendTransaction $transaction)
-    {
-        // Set the token
-        $this->setTerminalToken($transaction);
-    }
-
-    /**
-     * Before Refund transaction
-     *
-     * @param \XLite\Model\Payment\BackendTransaction $transaction
-     *
-     * @return void
-     */
-    public function doBeforeRefund(\XLite\Model\Payment\BackendTransaction $transaction)
-    {
-        // Set the token
-        $this->setTerminalToken($transaction);
-    }
-
-    /**
-     * Before Void transaction
-     *
-     * @param \XLite\Model\Payment\BackendTransaction $transaction
-     *
-     * @return void
-     */
-    public function doBeforeVoid(\XLite\Model\Payment\BackendTransaction $transaction)
-    {
-        // Set the token
-        $this->setTerminalToken($transaction);
     }
 
     /**
@@ -526,13 +564,7 @@ class EmerchantpayCheckout extends \EMerchantPay\Genesis\Model\Payment\Processor
      */
     public function getCheckoutTemplate(\XLite\Model\Payment\Method $method)
     {
-        if ($this->isCoreVersion52()) {
-            return parent::getCheckoutTemplate($method) . 'emerchantpayCheckout.tpl';
-        } elseif ($this->isCoreAboveVersion53()) {
-            return parent::getCheckoutTemplate($method) . 'emerchantpayCheckout.twig';
-        }
-
-        return null;
+        return parent::getCheckoutTemplate($method) . 'emerchantpayCheckout.twig';
     }
 
     /**

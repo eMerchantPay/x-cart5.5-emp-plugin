@@ -36,6 +36,8 @@ XLite\Model\Payment\Method:
         value: test
       - name: prefix
         value: store-
+      - name: iframe_processing
+        value: N
       - name: transaction_types
         value: '["authorize", "sale"]'
       - name: bank_codes

@@ -35,6 +35,16 @@ class EmerchantpayCheckout extends \EMerchantPay\Genesis\View\Model\AEmerchantpa
     {
         parent::__construct($params, $sections);
 
+        $this->schemaAdditional['iframe_processing'] = array(
+            self::SCHEMA_CLASS    => '\XLite\View\FormField\Select\EnabledDisabled',
+            self::SCHEMA_LABEL    => 'Payment processing in iframe',
+            self::SCHEMA_HELP     =>
+                'Enable payment processing into an iframe by removing the redirects to the Gateway Web ' .
+                'Payment Form Page. The iFrame processing requires a specific setting inside Merchant Console. ' .
+                'For more information contact <a href="mailto:tech-support@emerchantpay.com">' .
+                'tech-support@emerchantpay.com</a>',
+            self::SCHEMA_REQUIRED => false,
+        );
         $this->schemaAdditional['transaction_types'] = array(
             self::SCHEMA_CLASS    =>
                 '\EMerchantPay\Genesis\View\FormField\Checkout\Select\TransactionTypes',

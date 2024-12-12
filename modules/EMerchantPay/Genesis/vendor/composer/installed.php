@@ -1,8 +1,8 @@
 <?php return array(
     'root' => array(
         'name' => 'emerchantpay/xcart-emerchantpay-plugin',
-        'pretty_version' => '5.5.0.0',
-        'version' => '5.5.0.0',
+        'pretty_version' => '5.5.1.1',
+        'version' => '5.5.1.1',
         'reference' => null,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../../../../',
@@ -11,8 +11,8 @@
     ),
     'versions' => array(
         'emerchantpay/xcart-emerchantpay-plugin' => array(
-            'pretty_version' => '5.5.0.0',
-            'version' => '5.5.0.0',
+            'pretty_version' => '5.5.1.1',
+            'version' => '5.5.1.1',
             'reference' => null,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../../../../',
@@ -20,9 +20,9 @@
             'dev_requirement' => false,
         ),
         'genesisgateway/genesis_php' => array(
-            'pretty_version' => '2.0.3',
-            'version' => '2.0.3.0',
-            'reference' => '0dec0c133b98217e45e23f3e0e1e7984ccd9aa48',
+            'pretty_version' => '2.0.4',
+            'version' => '2.0.4.0',
+            'reference' => '264cea403be959dea81776455b540efbce75a74c',
             'type' => 'library',
             'install_path' => __DIR__ . '/../genesisgateway/genesis_php',
             'aliases' => array(),

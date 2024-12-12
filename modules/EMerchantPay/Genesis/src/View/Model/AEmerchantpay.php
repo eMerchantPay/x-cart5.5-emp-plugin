@@ -179,11 +179,7 @@ abstract class AEmerchantpay extends \XLite\View\Model\AModel
     {
         parent::defineWidgetParams();
 
-        $widgetParamClassName = '\XLite\Model\WidgetParam\Object';
-
-        if (\EMerchantPay\Genesis\Main::isCoreAboveVersion53()) {
-            $widgetParamClassName = '\XLite\Model\WidgetParam\TypeObject';
-        }
+        $widgetParamClassName = '\XLite\Model\WidgetParam\TypeObject';
 
         if (class_exists($widgetParamClassName)) {
             $this->widgetParams += array(
