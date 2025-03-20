@@ -8,8 +8,8 @@ This is a Payment Module for X-Cart, that gives you the ability to process payme
 Requirements
 ------------
 
-* X-Cart 5.5.x (Tested up to 5.5.1.31)
-* [GenesisPHP v2.0.4](https://github.com/GenesisGateway/genesis_php/releases/tag/2.0.4) - (Integrated in Module)
+* X-Cart 5.5.x (Tested up to 5.5.1.38)
+* [GenesisPHP v2.1.2](https://github.com/GenesisGateway/genesis_php/releases/tag/2.1.2) - (Integrated in Module)
 
 GenesisPHP Requirements
 ------------
@@ -87,7 +87,7 @@ Supported Transactions & Payment Methods
     * __Bancontact (BCT)__ 
     * __BLIK (BLK)__
     * __SPEI (SE)__
-    * __LatiPay (PID)__
+    * __PayID (PID)__
   * __OXXO__
   * __P24__
   * __Pago Facil__

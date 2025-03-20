@@ -1,4 +1,4 @@
-version: 5.5.1.2
+version: 5.5.2.0
 type: payment
 authorName: 'emerchantpay Ltd.'
 moduleName: 'emerchantpay'
@@ -7,7 +7,7 @@ minorRequiredCoreVersion: 0
 dependsOn: {  }
 incompatibleWith: {  }
 skins: {  }
-showSettingsForm: false
+showSettingsForm: true
 canDisable: true
 autoloader:
   - vendor/autoload.php

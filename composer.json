@@ -1,7 +1,7 @@
 {
     "name": "emerchantpay/xcart-emerchantpay-plugin",
     "description": "emerchantpay Gateway Module for X-Cart",
-    "version": "5.5.1.2",
+    "version": "5.5.2.0",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -36,6 +36,6 @@
         "vendor-dir": "modules/EMerchantPay/Genesis/vendor/"
     },
     "require": {
-        "genesisgateway/genesis_php": "2.0.4"
+        "genesisgateway/genesis_php": "2.1.2"
     }
 }

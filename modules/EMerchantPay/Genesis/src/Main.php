@@ -145,4 +145,20 @@ abstract class Main extends \XLite\Module\AModule
     {
         return \XLite::getInstance()->getVersion();
     }
+
+    /**
+     * Return link to settings form
+     *
+     * @return string
+     */
+    public static function getSettingsForm()
+    {
+        $paymentMethod = self::getPaymentMethod(self::EMP_CHECKOUT);
+
+        return \XLite\Core\Converter::buildURL(
+            'emerchantpay_settings',
+            '',
+            array('method_id' => $paymentMethod->getMethodId())
+        );
+    }
 }

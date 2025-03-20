@@ -1,0 +1,6 @@
+Version 5.5.2.0
+
+Features:
+
+    - Updated Genesis PHP SDK to version 2.1.2
+    - Renamed LatiPay to PayID bank code
